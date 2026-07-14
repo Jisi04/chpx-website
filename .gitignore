@@ -1,0 +1,28 @@
+# Environment variables and secrets — never commit real credentials here.
+# Whatever backend stack you pick later, keep real values out of git and
+# use that host's own environment-variable settings for production secrets.
+.env
+.env.*
+!.env.example
+
+# ASP.NET Core convention: appsettings.json (base/non-secret defaults) is fine
+# to commit; environment-specific files usually hold secrets, so they're not.
+appsettings.*.json
+!appsettings.json
+!appsettings.example.json
+
+*.pem
+*.key
+credentials.json
+secrets.json
+
+# Dependencies (once a backend framework is added to backend/)
+node_modules/
+__pycache__/
+*.pyc
+bin/
+obj/
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
