@@ -26,3 +26,7 @@ obj/
 # OS / editor junk
 .DS_Store
 Thumbs.db
+
+# Raw Notion brand asset dump — local reference only, not part of the
+# deployed site (the curated, web-ready copies live in web/assets/).
+brand-assets-raw/
