@@ -6,9 +6,17 @@ Marketing website for CHPX (Choppedstyx).
 
 `web/` is the static frontend (HTML/CSS/JS + assets) and is what's deployed to Netlify. `backend/` is a placeholder for future backend work and is empty for now.
 
-## Local development
+## Local development (Docker)
 
-`web/` is a plain static site with no build step. Open `web/index.html` directly, or serve the folder with any static file server.
+Preview changes locally before pushing, so Netlify isn't rebuilt for every small tweak.
+
+Install Docker Desktop if you don't have it, then from the repo root run: `docker compose up`
+
+Open http://localhost:8080 in your browser to view the site. Edit any file inside `web/`, save, and refresh the browser — the container mounts the folder directly so there's no rebuild step.
+
+Stop the preview with `docker compose down` (or Ctrl+C).
+
+Once changes look right, commit and push to `main` and Netlify will redeploy the live site automatically.
 
 ## Deployment
 
