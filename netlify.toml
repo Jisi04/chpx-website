@@ -3,3 +3,21 @@
   command = "npm run build"
   publish = "dist"
   ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- web/ netlify.toml"
+
+# Security response headers, applied to every route.
+#
+# CSP is scoped to what the site actually loads: Google Fonts (googleapis.com
+# for the stylesheet, gstatic.com for the font files themselves) and Formspree
+# (the Contact form's fetch() POST target — see web/.env.example). If you add
+# a new external resource (an embed, an analytics script, a new font host,
+# pointing the Contact form at the backend/ API instead of Formspree, etc.),
+# it needs its own entry here or the browser will silently block it.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "DENY"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Strict-Transport-Security = "max-age=31536000; includeSubDomains"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), interest-cohort=()"
+    Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self' https://formspree.io; object-src 'none'; base-uri 'self'; frame-ancestors 'none'"
