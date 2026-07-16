@@ -824,3 +824,139 @@ img { max-width: 100%; display: block; }
   align-items: start;
   display: grid;
   grid-template-columns: 1.4fr 1fr 1fr;
+  gap: 32px;
+  padding-bottom: 40px;
+}
+
+.footer-col {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-col a {
+  color: var(--muted);
+  font-size: 14px;
+}
+
+.footer-col a:hover { color: var(--accent); }
+
+.footer-col-title {
+  color: var(--accent-red);
+  font-size: 12px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0 0 4px;
+}
+
+.footer-brand-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-bottom: 4px;
+}
+
+.footer-logo {
+  height: 28px;
+  width: auto;
+  display: block;
+}
+
+.footer-brand p { font-size: 14px; max-width: 320px; }
+
+.footer-domain {
+  color: var(--text) !important;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.footer-bottom {
+  border-top: 1px solid var(--border);
+  padding-top: 20px;
+  padding-bottom: 32px;
+  justify-content: space-between;
+}
+
+.footer-bottom-tagline {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 12px;
+}
+
+.footer-accent {
+  color: var(--accent-red);
+  font-weight: 700;
+}
+
+@media (max-width: 860px) {
+  .card-grid-4 { grid-template-columns: repeat(2, 1fr); }
+  .roadmap-grid { grid-template-columns: repeat(2, 1fr); }
+  .contact-layout { grid-template-columns: 1fr; }
+  .contact-sidebar { margin-top: 8px; }
+  .form-row { flex-direction: column; gap: 22px; }
+  .footer-grid { grid-template-columns: 1fr 1fr; }
+  .footer-brand { grid-column: 1 / -1; }
+  .member-grid { grid-template-columns: repeat(3, 1fr); }
+}
+
+@media (max-width: 720px) {
+  .site-nav {
+    position: fixed;
+    top: 88px;
+    left: 0;
+    right: 0;
+    background: var(--bg);
+    border-bottom: 1px solid var(--border);
+    flex-direction: column;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.25s ease;
+  }
+
+  .site-nav.open { max-height: 320px; }
+
+  .nav-link {
+    padding: 16px 24px;
+    border-bottom: 1px solid var(--border);
+    width: 100%;
+  }
+
+  .nav-cta { display: none; }
+  .menu-toggle { display: flex; }
+
+  .hero { padding: 80px 0 64px; }
+  .section { padding: 64px 0; }
+
+  /* Center the whole hero block on mobile, and size the CHPX headline up
+     rather than down — clamp()'s vw-based scaling shrinks it too much on
+     narrow screens, so it needs its own larger mobile-only minimum. */
+  .hero-inner { text-align: center; }
+  .hero-title { font-size: clamp(90px, 22vw, 140px); }
+  .hero-subheading { font-size: clamp(28px, 7vw, 38px); }
+  .hero-divider { margin-left: auto; margin-right: auto; }
+  .hero-sub { margin-left: auto; margin-right: auto; }
+
+  /* Watermark: centered instead of pinned to the right, and sized up a
+     little from its desktop minimum. */
+  .hero-watermark {
+    right: auto;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 320px;
+  }
+
+  .card-grid,
+  .card-grid-4,
+  .roadmap-grid { grid-template-columns: 1fr; }
+
+  .cta-row { flex-direction: column; align-items: stretch; }
+  .cta-row .btn { width: 100%; }
+
+  .pillar-grid { grid-template-columns: 1fr; }
+  .stats-strip { grid-template-columns: 1fr; }
+  .footer-grid { grid-template-columns: 1fr; }
+  .footer-brand { grid-column: auto; }
+  .member-grid { grid-template-columns: repeat(2, 1fr); }
+}
