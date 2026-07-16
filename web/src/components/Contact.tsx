@@ -8,6 +8,11 @@ import { InstagramIcon, YoutubeIcon, TiktokIcon, FacebookIcon, DiscordIcon, Send
 // e.g. a typo like "sucess" — the compiler catches it, not a user.
 type FormStatus = "idle" | "sending" | "success" | "error";
 
+// Read from web/.env (see .env.example) rather than hardcoding the form ID
+// in source — keeps it out of git history and lets each environment
+// (local, Netlify) point at a different Formspree form if needed.
+const FORMSPREE_ENDPOINT = import.meta.env.VITE_FORMSPREE_ENDPOINT;
+
 export default function Contact() {
   const [status, setStatus] = useState<FormStatus>("idle");
 
@@ -56,7 +61,7 @@ export default function Contact() {
             <p className="section-eyebrow">Send a Message</p>
             <h2>Let's Build Something.</h2>
 
-            <form className="contact-form" action="https://formspree.io/f/xdaqavgv" method="POST" onSubmit={handleSubmit}>
+            <form className="contact-form" action={FORMSPREE_ENDPOINT} method="POST" onSubmit={handleSubmit}>
               <div className="form-row">
                 <div className="form-field">
                   <label htmlFor="name">Your Name</label>
