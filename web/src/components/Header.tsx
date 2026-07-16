@@ -61,4 +61,13 @@ export default function Header() {
           aria-label="Toggle menu"
           aria-expanded={menuOpen}
           aria-controls="site-nav"
-          onCli
+          onClick={() => setMenuOpen((open) => !open)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </header>
+  );
+}

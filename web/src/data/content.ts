@@ -51,4 +51,24 @@ export const pillars: Pillar[] = [
     number: "04",
     tag: "Collab",
     title: "Brand Collaborations",
-    description: "Helpi
+    description: "Helping brands work with creators in a more authentic, community-driven way.",
+    color: "#8b5cf6",
+  },
+];
+
+export const stats: Stat[] = [
+  { value: "100%", label: "Creator-led" },
+  { value: "PH-Based", label: "Globally minded" },
+  { value: "One Roof", label: "Collective × Agency × Production" },
+];
+
+export const members: Member[] = [
+  { slug: "anjel", name: "Anjel", role: "CHPX creator", color: "#8b5cf6" },
+  { slug: "apaul", name: "Apaul", role: "CHPX creator", color: "#14b8a6" },
+  { slug: "edge", name: "Edge", role: "CHPX creator", color: "#3b82f6" },
+  { slug: "erina", name: "Erina", role: "CHPX creator", color: "#eab308" },
+  { slug: "johnweak", name: "John Weak", role: "CHPX creator", color: "#22c55e" },
+  { slug: "maximus", name: "Maximus", role: "CHPX creator", color: "#ef4444" },
+  { slug: "nikkinikki", name: "Nikkinikki", role: "CHPX creator", color: "#ec4899" },
+  { slug: "yendere", name: "Yendere", role: "CHPX creator", color: "#f5820a" },
+];

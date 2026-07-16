@@ -29,4 +29,14 @@ export default function Hero() {
           one.
         </motion.p>
         <motion.div className="cta-row" variants={fadeUpItem}>
-          <MotionButton href="#meet" 
+          <MotionButton href="#meet" className="btn btn-primary">
+            Meet CHPX
+          </MotionButton>
+          <MotionButton href="#roadmap" className="btn btn-outline">
+            View Roadmap
+          </MotionButton>
+        </motion.div>
+      </motion.div>
+    </section>
+  );
+}
