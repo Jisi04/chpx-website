@@ -29,3 +29,10 @@ export interface NavLink {
   href: string;
   label: string;
 }
+
+/** One focus area on the roadmap teaser grid (the full, detailed roadmap
+ * deck is still "coming soon" — see Roadmap.tsx). */
+export interface RoadmapPhase {
+  title: string;
+  description: string;
+}
