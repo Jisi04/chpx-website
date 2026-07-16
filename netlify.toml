@@ -1,12 +1,5 @@
 [build]
-  publish = "web"
-
-  # Skip auto-deploys when nothing under web/ (or this file) changed —
-  # e.g. README or docker-compose edits won't burn a Netlify build.
-  # Manual "Trigger deploy" in the Netlify UI always works regardless of this.
-  #
-  # NOTE: if backend/ ever becomes something Netlify itself deploys
-  # (e.g. Netlify Functions instead of a separately-hosted service),
-  # add "backend/" to the watched paths below or this rule will silently
-  # stop auto-deploying backend changes.
+  base = "web"
+  command = "npm run build"
+  publish = "dist"
   ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF -- web/ netlify.toml"
