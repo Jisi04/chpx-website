@@ -56,8 +56,7 @@ export default function Contact() {
             <p className="section-eyebrow">Send a Message</p>
             <h2>Let's Build Something.</h2>
 
-            {/* TODO: replace action with your real Formspree endpoint */}
-            <form className="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST" onSubmit={handleSubmit}>
+            <form className="contact-form" action="https://formspree.io/f/xdaqavgv" method="POST" onSubmit={handleSubmit}>
               <div className="form-row">
                 <div className="form-field">
                   <label htmlFor="name">Your Name</label>
@@ -106,4 +105,50 @@ export default function Contact() {
               <div className="sidebar-rule accent" />
               <p className="sidebar-eyebrow">Find Us</p>
 
-    
+              <div className="sidebar-item">
+                <p className="sidebar-label">Email</p>
+                <a href="mailto:contact@chpx.ph">contact@chpx.ph</a>
+              </div>
+
+              <div className="sidebar-item">
+                <p className="sidebar-label">Based In</p>
+                <p className="sidebar-value">Philippines</p>
+              </div>
+
+              <div className="sidebar-item">
+                <p className="sidebar-label">Follow the Collective</p>
+                <div className="contact-social" aria-label="CHPX on social media">
+                  <a href="https://instagram.com/choppedstyxph" target="_blank" rel="noopener" aria-label="Instagram">
+                    <InstagramIcon />
+                  </a>
+                  <a href="https://youtube.com/@choppedstyxph" target="_blank" rel="noopener" aria-label="YouTube">
+                    <YoutubeIcon />
+                  </a>
+                  <a href="https://tiktok.com/@choppedstyxph" target="_blank" rel="noopener" aria-label="TikTok">
+                    <TiktokIcon />
+                  </a>
+                  <a href="https://facebook.com/choppedstyxph" target="_blank" rel="noopener" aria-label="Facebook">
+                    <FacebookIcon />
+                  </a>
+                  <a href="https://discord.gg/choppedstyxph" target="_blank" rel="noopener" aria-label="Discord">
+                    <DiscordIcon />
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <div className="sidebar-panel">
+              <div className="sidebar-rule accent-red" />
+              <p className="sidebar-eyebrow">Explore</p>
+              <nav className="sidebar-links">
+                <a href="#about">— About CHPX</a>
+                <a href="#meet">— Meet the Crew</a>
+                <a href="#roadmap">— Roadmap</a>
+              </nav>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </section>
+  );
+}
