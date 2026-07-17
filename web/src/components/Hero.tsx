@@ -20,7 +20,7 @@ export default function Hero() {
             wordmark image — left-aligned to match the eyebrow above it. */}
         <motion.h1 className="hero-title" variants={fadeUpItem}>
           CHP
-          <img src="/assets/hero-mark.png" alt="X" className="hero-title-mark" />
+          <img src="/assets/hero-chopsticks.png" alt="X" className="hero-title-mark" />
         </motion.h1>
         <motion.div className="hero-divider" variants={fadeUpItem} />
         <motion.p className="hero-subheading" variants={fadeUpItem}>
