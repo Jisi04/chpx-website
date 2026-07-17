@@ -651,7 +651,7 @@ img { max-width: 100%; display: block; }
 
 .roadmap-grid .card { flex: 0 1 calc(33.333% - 13.34px); }
 
-.roadmap-cta { margin-top: 8px; }
+.roadmap-cta { margin-top: 8px; text-align: center; }
 
 /* Stands in for a real disabled <button> since this isn't a form control —
    just a visual "not clickable yet" state on the Coming Soon label. */
