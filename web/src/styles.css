@@ -280,26 +280,14 @@ img { max-width: 100%; display: block; }
   margin: 8px 0 20px;
 }
 
-/* Wraps the "P" + the chopsticks mark so the mark can be absolutely
-   positioned and layered behind the letter (isolation: isolate scopes the
-   negative z-index below to just this box, not the whole hero). */
-.hero-title-p-wrap {
-  position: relative;
-  display: inline-block;
-  isolation: isolate;
-}
-
-/* Sized/positioned in em so it scales with .hero-title's clamp()'d font-size
-   instead of needing its own breakpoints. Negative z-index puts it behind
-   the "P" text painted above it. */
+/* Sized in em so it scales with .hero-title's clamp()'d font-size instead
+   of needing its own breakpoints. */
 .hero-title-mark {
-  position: absolute;
-  left: 0.18em;
-  top: 50%;
-  transform: translateY(-48%);
-  height: 1.3em;
+  display: inline-block;
+  height: 1.15em;
   width: auto;
-  z-index: -1;
+  vertical-align: -0.2em;
+  margin-left: -0.12em;
 }
 
 .hero-subheading {

@@ -19,14 +19,8 @@ export default function Hero() {
             mark (brand asset), and the Choppedstyx line swapped for the light
             wordmark image — left-aligned to match the eyebrow above it. */}
         <motion.h1 className="hero-title" variants={fadeUpItem}>
-          CH
-          {/* The chopsticks image sits behind the "P" (negative z-index inside
-              its own stacking context) so the two interlock like the Canva
-              reference, instead of the mark just floating on top of the letter. */}
-          <span className="hero-title-p-wrap">
-            P
-            <img src="/assets/hero-chopsticks.png" alt="X" className="hero-title-mark" />
-          </span>
+          CHP
+          <img src="/assets/hero-chopsticks.png" alt="X" className="hero-title-mark" />
         </motion.h1>
         <motion.div className="hero-divider" variants={fadeUpItem} />
         <motion.p className="hero-subheading" variants={fadeUpItem}>
