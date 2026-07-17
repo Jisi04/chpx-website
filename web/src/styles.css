@@ -287,7 +287,7 @@ img { max-width: 100%; display: block; }
   height: 1.15em;
   width: auto;
   vertical-align: -0.2em;
-  margin-left: 0.01em;
+  margin-left: -0.12em;
 }
 
 .hero-subheading {
