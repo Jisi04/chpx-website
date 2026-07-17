@@ -284,10 +284,10 @@ img { max-width: 100%; display: block; }
    of needing its own breakpoints. */
 .hero-title-mark {
   display: inline-block;
-  height: 1.15em;
+  height: 1.28em;
   width: auto;
   vertical-align: -0.2em;
-  margin-left: -0.12em;
+  margin-left: -0.22em;
 }
 
 .hero-subheading {
