@@ -8,7 +8,10 @@ export interface Pillar {
   tag: string;
   title: string;
   description: string;
-  /** Signature accent color for this pillar's tag + title (hex). */
+  /** Short keyword chips shown under the description (pulled from the
+   * description's own wording, not separate marketing copy). */
+  tags: string[];
+  /** Signature accent color for this pillar's number + chips (hex). */
   color: string;
 }
 

@@ -407,39 +407,50 @@ img { max-width: 100%; display: block; }
 }
 
 .pillar-card {
-  background: rgba(28, 28, 28, 0.55);
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  display: flex;
+  flex-direction: column;
+  background: rgba(28, 28, 28, 0.4);
   border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 38px;
+  border-top: 3px solid var(--pillar-color, var(--accent));
+  border-radius: 6px;
+  padding: 32px 36px 28px;
   position: relative;
 }
 
-.pillar-tag {
-  display: inline-block;
-  padding: 4px 12px;
-  border-radius: 999px;
-  font-size: 11px;
-  font-weight: 700;
+.pillar-number {
+  font-family: var(--font-display);
+  font-size: 28px;
+  line-height: 1;
+  color: var(--pillar-color, var(--accent));
+  margin-bottom: 14px;
+}
+
+.pillar-card h3.pillar-title {
+  font-size: 21px;
+  margin: 0 0 10px;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  position: absolute;
-  top: 32px;
-  right: 32px;
+  color: var(--text);
+}
+
+.pillar-card p { margin: 0 0 18px; font-size: 15px; color: var(--muted); }
+
+.pillar-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: auto;
+}
+
+.pillar-chip {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 600;
   background: transparent;
   border: 1px solid var(--pillar-color, var(--accent));
   color: var(--pillar-color, var(--accent));
 }
-
-.pillar-card h3.pillar-title {
-  font-size: 23px;
-  margin: 8px 0 8px;
-  text-transform: uppercase;
-  color: var(--pillar-color, var(--text));
-}
-
-.pillar-card p { margin: 0; font-size: 15px; }
 
 /* ---------------- Stats strip ---------------- */
 

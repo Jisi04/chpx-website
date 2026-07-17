@@ -26,9 +26,16 @@ export default function PillarCard({ pillar }: PillarCardProps) {
       whileHover={{ y: -6, backgroundColor: "rgba(38, 38, 38, 0.75)" }}
       transition={{ type: "spring", stiffness: 300, damping: 22 }}
     >
-      <span className="pillar-tag">{pillar.tag}</span>
+      <span className="pillar-number">{pillar.number}</span>
       <h3 className="pillar-title">{pillar.title}</h3>
       <p>{pillar.description}</p>
+      <div className="pillar-chips">
+        {pillar.tags.map((chip) => (
+          <span className="pillar-chip" key={chip}>
+            {chip}
+          </span>
+        ))}
+      </div>
     </motion.article>
   );
 }

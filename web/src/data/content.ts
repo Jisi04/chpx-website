@@ -31,6 +31,7 @@ export const pillars: Pillar[] = [
     tag: "Talent",
     title: "Talent Management",
     description: "Creator bookings, brand deals, campaign matching, and opportunities.",
+    tags: ["Creator Bookings", "Brand Deals", "Campaign Matching", "Opportunities"],
     color: "#ec4899",
   },
   {
@@ -38,6 +39,7 @@ export const pillars: Pillar[] = [
     tag: "Production",
     title: "Production Company",
     description: "Social media content, livestreams, shoots, branded videos, and event coverage.",
+    tags: ["Social Media Content", "Livestreams", "Shoots", "Branded Videos", "Event Coverage"],
     color: "#f5820a",
   },
   {
@@ -45,6 +47,7 @@ export const pillars: Pillar[] = [
     tag: "Community",
     title: "Creator Collective",
     description: "A home for creators to collaborate, grow, and create together.",
+    tags: ["Collaborate", "Grow", "Create Together"],
     color: "#22d3ee",
   },
   {
@@ -52,6 +55,7 @@ export const pillars: Pillar[] = [
     tag: "Collab",
     title: "Brand Collaborations",
     description: "Helping brands work with creators in a more authentic, community-driven way.",
+    tags: ["Authentic", "Community-Driven"],
     color: "#8b5cf6",
   },
 ];
