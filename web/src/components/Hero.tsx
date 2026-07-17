@@ -15,14 +15,16 @@ export default function Hero() {
         <motion.p className="eyebrow" variants={fadeUpItem}>
           Creator Collective × Content × Community
         </motion.p>
-        {/* Back to the original plain-text "CHPX" / "Choppedstyx" headline
-            (no images), left-aligned to match the eyebrow above it. */}
+        {/* "CHPX" headline with the X swapped for the orange crossed-chopsticks
+            mark (brand asset), and the Choppedstyx line swapped for the light
+            wordmark image — left-aligned to match the eyebrow above it. */}
         <motion.h1 className="hero-title" variants={fadeUpItem}>
-          CHPX
+          CHP
+          <img src="/assets/hero-mark.png" alt="X" className="hero-title-mark" />
         </motion.h1>
         <motion.div className="hero-divider" variants={fadeUpItem} />
         <motion.p className="hero-subheading" variants={fadeUpItem}>
-          Choppedstyx
+          <img src="/assets/hero-wordmark.png" alt="Choppedstyx" className="hero-subheading-img" />
         </motion.p>
         <motion.p className="hero-sub" variants={fadeUpItem}>
           We are a creator collective, talent, digital marketing, and production company — all in

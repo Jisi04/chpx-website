@@ -269,7 +269,8 @@ img { max-width: 100%; display: block; }
 }
 
 .hero-title {
-  /* Plain-text "CHPX" headline, left-aligned to match the eyebrow above it. */
+  /* "CHP" text + the chopsticks-mark image standing in for the X,
+     left-aligned to match the eyebrow above it. */
   display: block;
   font-size: clamp(64px, 12vw, 160px);
   line-height: 0.95;
@@ -279,14 +280,24 @@ img { max-width: 100%; display: block; }
   margin: 8px 0 20px;
 }
 
+/* Sized in em so it scales with .hero-title's clamp()'d font-size instead
+   of needing its own breakpoints. */
+.hero-title-mark {
+  display: inline-block;
+  height: 0.82em;
+  width: auto;
+  vertical-align: -0.05em;
+  margin-left: 0.01em;
+}
+
 .hero-subheading {
-  font-family: var(--font-display);
-  font-size: clamp(22px, 3.2vw, 34px);
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  text-transform: uppercase;
-  color: var(--muted);
   margin: 0 0 32px;
+}
+
+.hero-subheading-img {
+  display: inline-block;
+  height: clamp(30px, 4.2vw, 44px);
+  width: auto;
 }
 
 .hero-divider {
@@ -954,7 +965,7 @@ img { max-width: 100%; display: block; }
      narrow screens, so it needs its own larger mobile-only minimum. */
   .hero-inner { text-align: center; }
   .hero-title { font-size: clamp(90px, 22vw, 140px); }
-  .hero-subheading { font-size: clamp(28px, 7vw, 38px); }
+  .hero-subheading-img { height: clamp(34px, 9vw, 48px); }
   .hero-divider { margin-left: auto; margin-right: auto; }
   .hero-sub { margin-left: auto; margin-right: auto; }
 
