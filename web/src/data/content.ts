@@ -29,7 +29,7 @@ export const pillars: Pillar[] = [
   {
     number: "01",
     tag: "Talent",
-    title: "Talent Agency",
+    title: "Talent Management",
     description: "Creator bookings, brand deals, campaign matching, and opportunities.",
     color: "#ec4899",
   },
@@ -59,7 +59,7 @@ export const pillars: Pillar[] = [
 export const stats: Stat[] = [
   { value: "100%", label: "Creator-led" },
   { value: "PH-Based", label: "Globally minded" },
-  { value: "One Roof", label: "Collective × Agency × Production" },
+  { value: "One Roof", label: "Collective × Content × Community" },
 ];
 
 export const members: Member[] = [

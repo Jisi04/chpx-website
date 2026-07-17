@@ -13,7 +13,7 @@ export default function Hero() {
           page load - there's nothing to "scroll into view" here. */}
       <motion.div className="hero-inner" variants={staggerContainer} initial="hidden" animate="visible">
         <motion.p className="eyebrow" variants={fadeUpItem}>
-          Creator Collective × Agency × Production
+          Creator Collective × Content × Community
         </motion.p>
         {/* Back to the original plain-text "CHPX" / "Choppedstyx" headline
             (no images), left-aligned to match the eyebrow above it. */}
@@ -25,7 +25,7 @@ export default function Hero() {
           Choppedstyx
         </motion.p>
         <motion.p className="hero-sub" variants={fadeUpItem}>
-          We are a creator collective, talent agency, digital marketing agency, and production company — all in
+          We are a creator collective, talent, digital marketing, and production company — all in
           one.
         </motion.p>
         <motion.div className="cta-row" variants={fadeUpItem}>

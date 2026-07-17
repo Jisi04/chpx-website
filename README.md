@@ -1,6 +1,6 @@
 # CHPX.ph
 
-Website for **CHPX (Choppedstyx)** — a creator collective, talent agency, digital marketing agency, and production company based in the Philippines.
+Website for **CHPX (Choppedstyx)** — a creator collective, talent, digital marketing, and production company based in the Philippines.
 
 Live at [chpx.ph](https://chpx.ph), deployed automatically from `main` via Netlify.
 
