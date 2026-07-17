@@ -629,7 +629,16 @@ img { max-width: 100%; display: block; }
 
 /* ---------------- Roadmap ---------------- */
 
-.roadmap-grid { grid-template-columns: repeat(3, 1fr); }
+/* Flex instead of grid so an incomplete last row (7 phases in a 3-column
+   layout leaves one card alone) centers itself instead of hugging the
+   left edge. */
+.roadmap-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.roadmap-grid .card { flex: 0 1 calc(33.333% - 13.34px); }
 
 .roadmap-cta { margin-top: 8px; }
 
@@ -902,7 +911,7 @@ img { max-width: 100%; display: block; }
 
 @media (max-width: 860px) {
   .card-grid-4 { grid-template-columns: repeat(2, 1fr); }
-  .roadmap-grid { grid-template-columns: repeat(2, 1fr); }
+  .roadmap-grid .card { flex-basis: calc(50% - 10px); }
   .contact-layout { grid-template-columns: 1fr; }
   .contact-sidebar { margin-top: 8px; }
   .form-row { flex-direction: column; gap: 22px; }
@@ -959,8 +968,9 @@ img { max-width: 100%; display: block; }
   }
 
   .card-grid,
-  .card-grid-4,
-  .roadmap-grid { grid-template-columns: 1fr; }
+  .card-grid-4 { grid-template-columns: 1fr; }
+
+  .roadmap-grid .card { flex-basis: 100%; }
 
   .cta-row { flex-direction: column; align-items: stretch; }
   .cta-row .btn { width: 100%; }
